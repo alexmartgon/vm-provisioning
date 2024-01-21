@@ -118,7 +118,7 @@ provider "esxi" {
 resource "esxi_guest" "vmtest" {
   guest_name         = var.vm-name
   disk_store         = var.datastore-name
-  #
+  boot_firmware      = "efi"
   #  Specify an existing guest to clone, an ovf source, or neither to build a bare-metal guest vm.
   #
   #clone_from_vm      = "Templates/centos7"
