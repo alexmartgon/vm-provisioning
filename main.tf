@@ -127,5 +127,6 @@ resource "esxi_guest" "vmtest" {
 
   network_interfaces {
     virtual_network = "VM Network"
+    nic_type = "vmxnet3"
   }
 }
