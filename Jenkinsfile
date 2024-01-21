@@ -13,15 +13,15 @@ pipeline {
             }
             steps {
                 echo 'Setting up environment for terraform'
-                sh('export TF_VAR_vsphere_server=$VSPHERE_SERVER')
-                sh('export TF_VAR_vsphere_user=$VSPHERE_USER_USR')
-                sh('export TF_VAR_vsphere_password=$VSPHERE_USER_PSW')
-                sh('echo $TF_VAR_vsphere_password')
+                sh 'export TF_VAR_vsphere_server=$VSPHERE_SERVER'
+                sh 'export TF_VAR_vsphere_user=$VSPHERE_USER_USR'
+                sh 'export TF_VAR_vsphere_password=$VSPHERE_USER_PSW'
+                sh 'echo $TF_VAR_vsphere_password'
 
                 echo 'Planning Terraform script'
-                sh('terraform init')
-                sh('terraform plan -input=false -out tfplan')
-                sh('terraform show -no-color tfplan') //> tfplan.txt
+                sh 'terraform init'
+                sh 'terraform plan -input=false -out tfplan'
+                sh 'terraform show -no-color tfplan' //> tfplan.txt
             }
         }
 
