@@ -123,6 +123,7 @@ resource "esxi_guest" "vmtest" {
   #
   #clone_from_vm      = "Templates/centos7"
   ovf_source        = var.ovf-path
+  power             = "off"
 
   network_interfaces {
     virtual_network = "VM Network"
