@@ -28,7 +28,9 @@ pipeline {
                     export TF_VAR_vsphere_user=$VSPHERE_USER_USR
                     export TF_VAR_vsphere_password=$VSPHERE_USER_PSW
                     echo $TF_VAR_vsphere_password
-
+                                        
+                    export PATH=$PATH:/home/jenkins/ovftool
+                    
                     terraform init
                     terraform plan -input=false -out tfplan
                     terraform show -no-color tfplan  > tfplan.txt
