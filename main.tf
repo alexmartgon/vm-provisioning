@@ -130,5 +130,5 @@ resource "esxi_guest" "vmtest" {
     nic_type = "vmxnet3"
   }
 
-  guest_startup_timeout  = 120
+  guest_startup_timeout  = 60
 }
