@@ -16,6 +16,7 @@ pipeline {
                 sh('export TF_VAR_vsphere_server=$VSPHERE_SERVER')
                 sh('export TF_VAR_vsphere_user=$VSPHERE_USER_USR')
                 sh('export TF_VAR_vsphere_password=$VSPHERE_USER_PSW')
+                sh('echo $TF_VAR_vsphere_password')
 
                 echo 'Planning Terraform script'
                 sh('terraform init')
