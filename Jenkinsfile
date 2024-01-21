@@ -31,8 +31,9 @@ pipeline {
 
                     terraform init
                     terraform plan -input=false -out tfplan
-                    terraform show -no-color tfplan
-                    ''' // > tfplan.txt
+                    terraform show -no-color tfplan  > tfplan.txt
+                    terraform apply -input=false tfplan
+                    '''
             }
         }
 
@@ -40,6 +41,7 @@ pipeline {
 
             steps{
                 echo 'Provisioning the VMs' 
+                sh 'cat tfplan.txt'
             }
         }
 
