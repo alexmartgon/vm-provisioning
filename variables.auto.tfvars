@@ -1,3 +1,3 @@
 datastore-name = "datastore1"
-ovf-path = "/var/local/ovf-templates/fedora-standard/fedora-standard.ova"
+ovf-path = "/var/local/ovf-templates/fedora-standard/test.ovf"
 vm-name = "test-remote"
