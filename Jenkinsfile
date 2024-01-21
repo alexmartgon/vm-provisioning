@@ -29,7 +29,6 @@ pipeline {
                     export TF_VAR_vsphere_password=$VSPHERE_USER_PSW
                     echo $TF_VAR_vsphere_password
 
-                    Planning Terraform script
                     terraform init
                     terraform plan -input=false -out tfplan
                     terraform show -no-color tfplan
