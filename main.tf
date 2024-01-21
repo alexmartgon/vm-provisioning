@@ -123,10 +123,12 @@ resource "esxi_guest" "vmtest" {
   #
   #clone_from_vm      = "Templates/centos7"
   ovf_source        = var.ovf-path
-  power             = "off"
+  power             = "on"
 
   network_interfaces {
     virtual_network = "VM Network"
     nic_type = "vmxnet3"
   }
+
+  guest_startup_timeout  = 120
 }
