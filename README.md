@@ -21,6 +21,7 @@ Terraform Script for deploying a VM in an esxi host.
 - [ ] Script uses ESXI service user to perform task.
 
 ## License and copyright notice
-The terraform used in this Terraform script was developed by Josenk.
+The terraform provider used in this Terraform script was developed by Josenk. Thank you very much for your incredible work.
+
 https://github.com/josenk/terraform-provider-esxi
 https://registry.terraform.io/providers/josenk/esxi
