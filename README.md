@@ -19,3 +19,8 @@ Terraform Script for deploying a VM in an esxi host.
 - Script should make an easy to gather output.
 - Investigate user data (most of the time not worth worrying about, just embed with Ansible).
 - [ ] Script uses ESXI service user to perform task.
+
+## License and copyright notice
+The terraform used in this Terraform script was developed by Josenk.
+https://github.com/josenk/terraform-provider-esxi
+https://registry.terraform.io/providers/josenk/esxi
