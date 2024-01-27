@@ -12,5 +12,5 @@ variable "ovf-path"{
 }
 
 variable "vm-name" {
-    type = string
+    type = list(string)
 }
