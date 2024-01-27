@@ -9,8 +9,16 @@ terraform {
       # https://registry.terraform.io/providers/josenk/esxi
     }
   }
+  ### This is more because I want this to be a quick and easy way to deploy ovfs. Without having to keep a state
+  ### For different deployments I will use a copy of this file to have a state.
+  # backend "local" {
+  #   path = "relative/path/to/terraform.tfstate"
+  # }
 }
 
+terraform {
+
+}
 provider "esxi" {
   esxi_hostname      = var.vsphere_server
   esxi_username      = var.vsphere_user
