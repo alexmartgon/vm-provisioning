@@ -18,7 +18,9 @@ provider "esxi" {
 }
 
 resource "esxi_guest" "vmtest" {
-  guest_name         = var.vm-name
+  ### Get the count of instances to create
+  count = length(var.vm-name)
+  guest_name         = var.vm-name[count.index]
   disk_store         = var.datastore-name
   boot_firmware      = "efi"
   #  Specify an existing guest to clone, an ovf source, or neither to build a bare-metal guest vm.
@@ -32,5 +34,5 @@ resource "esxi_guest" "vmtest" {
     nic_type = "vmxnet3"
   }
 
-  guest_startup_timeout  = 60
+  guest_startup_timeout  = 20
 }
