@@ -34,5 +34,5 @@ resource "esxi_guest" "vm" {
     nic_type = "vmxnet3"
   }
 
-  guest_startup_timeout  = 20
+  guest_startup_timeout  = 60
 }
