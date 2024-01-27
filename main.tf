@@ -17,7 +17,7 @@ provider "esxi" {
   esxi_password      = var.vsphere_password
 }
 
-resource "esxi_guest" "vmtest" {
+resource "esxi_guest" "vm" {
   ### Get the count of instances to create
   count = length(var.vm-name)
   guest_name         = var.vm-name[count.index]
