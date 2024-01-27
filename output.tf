@@ -1,3 +1,3 @@
 output "ip" {
-  value = [esxi_guest.vmtest.ip_address]
+  value = [esxi_guest.vm[*].ip_address]
 }

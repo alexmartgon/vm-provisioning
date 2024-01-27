@@ -14,3 +14,6 @@ variable "ovf-path"{
 variable "vm-name" {
     type = list(string)
 }
+variable "ip_address" {
+    type = list(string)
+}
