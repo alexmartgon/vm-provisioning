@@ -13,7 +13,7 @@ Terraform Script for deploying a VM in an esxi host.
 - [ ] Terraform script refining.
 - Script should allow you to create multiple machines. (**Only planning one OVA to loop through can add more but seems like a hastle for the tfvars file**)
 - Script should allow you to define multiple names; CPUs and RAM allocation.
-- Script should make an easy to gather output.
+- Script should make it easy to gather output.
 - Investigate user data (most of the time not worth worrying about, just embed with Ansible).
 - [ ] Creating OVAs for all desired OS's and Architectures. **(Will do as required)**
 - Fedora ARM and amd_64 (Currently only amd_64).
