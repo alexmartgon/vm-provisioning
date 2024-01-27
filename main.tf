@@ -16,9 +16,6 @@ terraform {
   # }
 }
 
-terraform {
-
-}
 provider "esxi" {
   esxi_hostname      = var.vsphere_server
   esxi_username      = var.vsphere_user
