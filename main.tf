@@ -34,6 +34,9 @@ resource "esxi_guest" "vm" {
   ovf_source        = var.ovf-path
   power             = "on"
 
+  memsize            = var.vm-ram[count.index]
+  numvcpus           = var.vm-cpu[count.index]
+
   network_interfaces {
     virtual_network = "VM Network"
     nic_type = "vmxnet3"

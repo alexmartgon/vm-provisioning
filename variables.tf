@@ -14,3 +14,11 @@ variable "ovf-path"{
 variable "vm-name" {
     type = list(string)
 }
+
+variable "vm-ram" {
+    type = list(number)
+}
+
+variable "vm-cpu" {
+    type = list(number)
+}
