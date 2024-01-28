@@ -36,7 +36,9 @@ pipeline {
                     export PATH=$PATH:/home/jenkins/ovftool
 
                     echo "Remove the current terraform state"
+                    if [ -f "terraform.tfstate" ]; then
                     rm terraform.tfstate
+                    fi
 
                     terraform init
                     terraform plan -input=false -out tfplan
