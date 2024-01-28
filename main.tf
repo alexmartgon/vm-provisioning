@@ -32,7 +32,7 @@ resource "esxi_guest" "vm" {
   #
   #clone_from_vm      = "Templates/centos7"
   ovf_source        = var.ovf-path
-  power             = "on"
+  power             = "off"
 
   memsize            = var.vm-ram[count.index]
   numvcpus           = var.vm-cpu[count.index]

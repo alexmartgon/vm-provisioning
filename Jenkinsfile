@@ -37,10 +37,9 @@ pipeline {
 
                     terraform init
                     terraform plan -input=false -out tfplan
-                    terraform show tfplan > tfplan.txt
                 '''
                 
-                sh 'cat tfplan.txt'
+                sh 'terraform show tfplan'
             }
         }
 
@@ -72,7 +71,7 @@ pipeline {
                 echo 'Printing Terraform Output for the VMs created:' 
                 sh '''
                     terraform output  -state=terraform.tfstate
-                    Schema: Name, Private IP, RAM, CPU.
+                    echo "Schema: Name, Private IP, RAM, CPU."
                 '''
                 //echo 'Schema: Name, Private IP, RAM, CPU.'
             }
