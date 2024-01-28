@@ -44,10 +44,6 @@ pipeline {
                 
                 sh 'terraform show tfplan'
 
-                // Create an Approval Button with a timeout of 15minutes.
-                timeout(time: 15, unit: "MINUTES") {
-                    input message: 'Do you want to approve the deployment?', ok: 'Yes'
-                }
             }
         }
 
@@ -59,6 +55,10 @@ pipeline {
             }
 
             steps{
+                // Create an Approval Button with a timeout of 15minutes.
+                timeout(time: 15, unit: "MINUTES") {
+                    input message: 'Do you want to approve the deployment? Look at the tfplan that was created on the previous stage.', ok: 'Yes'
+                }
                 echo 'Provisioning the VMs' 
                 sh '''
                     #!/bin/bash

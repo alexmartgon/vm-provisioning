@@ -12,7 +12,7 @@ Terraform Script for deploying a VM in an esxi host.
     - Script should allow you to define multiple names; CPUs and RAM allocation.
     - Script should make it easy to gather output.
     - Investigate user data for creating different ssh key pairs per instance. **(Tabled for now)**
-- [ ] Jenkins file correctly has stages (Approvals??).
+- [x] Jenkins file correctly has stages (Approvals??).
     - There is a plan stage, an applying stage and an output stage.
     - An approval in between plan and applying would be very cool.
 - [ ] Creating OVAs for all desired OS's and Architectures. **(Will do as required)**
