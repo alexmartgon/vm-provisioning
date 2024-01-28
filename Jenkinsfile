@@ -2,6 +2,9 @@ pipeline {
 
     //Use any jenkins agent available (master or slaves)
     agent any
+    options {
+        ansiColor('xterm')
+    }
 
     stages {
         
